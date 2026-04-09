@@ -1,0 +1,106 @@
+{
+  "today_noon": {
+    "id": "today_noon",
+    "name": "Today Noon",
+    "opts": {
+      "device_class": "energy",
+      "unit_of_measurement": "Wh",
+      "state_class": "total"
+    },
+    "day": "today",
+    "type": "sensor",
+    "value_name": "noon"
+  },
+  "tomorrow_noon": {
+    "id": "tomorrow_noon",
+    "name": "Tomorrow Noon",
+    "opts": {
+      "device_class": "energy",
+      "unit_of_measurement": "Wh",
+      "state_class": "total"
+    },
+    "type": "sensor",
+    "day": "tomorrow",
+    "value_name": "noon"
+  },
+  "next_hour": {
+    "id": "next_hour",
+    "name": "Next Hour",
+    "opts": {
+      "device_class": "energy",
+      "unit_of_measurement": "kWh",
+      "state_class": "total"
+    },
+    "type": "sensor",
+    "day": "today",
+    "value_name": "nextHour"
+  },
+  "this_hour": {
+    "id": "this_hour",
+    "name": "This Hour",
+    "opts": {
+      "device_class": "energy",
+      "unit_of_measurement": "kWh",
+      "state_class": "total"
+    },
+    "type": "sensor",
+    "day": "today",
+    "value_name": "currentHour"
+  },
+  "today_remaining": {
+    "id": "today_remaining",
+    "name": "Today Remaining",
+    "opts": {
+      "device_class": "energy",
+      "unit_of_measurement": "kWh",
+      "state_class": "total"
+    },
+    "type": "sensor",
+    "day": "today",
+    "value_name": "remaining"
+  },
+  "today_total": {
+    "id": "today_total",
+    "name": "Today Total",
+    "opts": {
+      "device_class": "energy",
+      "unit_of_measurement": "kWh",
+      "state_class": "total"
+    },
+    "type": "sensor",
+    "day": "today",
+    "value_name": "total"
+  },
+  "today_peak": {
+    "id": "today_peak",
+    "name": "Today Peak",
+    "opts": {
+      "icon": "mdi:clock"
+    },
+    "type": "sensor",
+    "day": "today",
+    "value_name": "peakTime"
+  },
+  "tomorrow_total": {
+    "id": "tomorrow_total",
+    "name": "Tomorrow Total",
+    "opts": {
+      "device_class": "energy",
+      "unit_of_measurement": "kWh",
+      "state_class": "total"
+    },
+    "type": "sensor",
+    "day": "tomorrow",
+    "value_name": "total"
+  },
+  "tomorrow_peak": {
+    "id": "tomorrow_peak",
+    "name": "Tomorrow Peak",
+    "opts": {
+      "icon": "mdi:clock"
+    },
+    "type": "sensor",
+    "day": "tomorrow",
+    "value_name": "peakTime"
+  }
+}

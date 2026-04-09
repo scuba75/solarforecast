@@ -1,0 +1,31 @@
+{
+  "name": "solarforecast",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "chmod a+x build.sh && ./build.sh solarforecast"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "/app/data/*"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scuba75/solarforecast.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scuba75/solarforecast/issues"
+  },
+  "homepage": "https://github.com/scuba75/solarforecast#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "express": "^5.2.1",
+    "mqtt": "^5.3.3",
+    "node-fetch": "^2.6.12"
+  }
+}
