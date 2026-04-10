@@ -18,7 +18,7 @@ COPY --from=builder node_modules node_modules/
 COPY package*.json ./
 COPY index.js index.js
 COPY src ./src
-
+RUN npm install -g nodemon
 USER node
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD [ "node", "./index.js"  ]
+CMD [ "nodemon", "--trace-warnings", "./index.js"  ]

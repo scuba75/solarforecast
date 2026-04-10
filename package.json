@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "chmod a+x build.sh && ./build.sh solarforecast"
+    "build": "chmod a+x build.sh && ./build.sh Dockerfile.dev solarforecast:test",
+    "prod": "chmod a+x build.sh && ./build.sh Dockerfile solarforecast:latest"
   },
   "nodemonConfig": {
     "ignore": [
