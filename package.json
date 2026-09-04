@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/scuba75/solarforecast#readme",
   "dependencies": {
+    "@influxdata/influxdb-client": "^1.35.0",
     "chalk": "^4.1.0",
     "express": "^5.2.1",
     "mqtt": "^5.3.3",

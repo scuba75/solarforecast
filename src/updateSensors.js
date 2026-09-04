@@ -4,7 +4,17 @@ const { dataList } = require('./dataList')
 const mqtt = require('./mqtt')
 const timeZone = "America/New_York";
 const sensorConfig = require('./sensorConfig.json')
+const influxdb = require('./influxdb')
 
+function getTimeStamp(dateString, msgTime){
+  let array = msgTime.split('+'), offSetSymbol = '+'
+  if(array?.length < 2){
+    array = msgTime.split('-')
+    offSetSymbol = '-'
+  }
+  let tzString = `${dateString.replace(' ', 'T')}${offSetSymbol}${array[array.length-1]}`
+  return Math.floor((new Date(tzString)).getTime())
+}
 const getDate = new Intl.DateTimeFormat("en-CA", {
   timeZone,
   year: "numeric",

@@ -61,7 +61,7 @@ module.exports = async()=>{
   try{
     let uri = `https://api.forecast.solar/${API_KEY}/estimate/${LATITUDE}/${LONGITUDE}/${PLANE_DECLINATION}/${AZIMUTH}/${KWP}`
     let res = await requestWithRetry(uri, { timeout: 30000, compress: true, method: 'GET' })
-    return res?.body?.result
+    return { ...(res?.body?.result || {}),...(res?.body?.message?.info || {}) }
   }catch(e){
     log.error(e);
   }
