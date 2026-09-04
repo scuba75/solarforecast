@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "chmod a+x updategitdependency.sh && ./updategitdependency.sh",
     "build": "chmod a+x build.sh && ./build.sh Dockerfile.dev solarforecast:test",
     "prod": "chmod a+x build.sh && ./build.sh Dockerfile solarforecast:latest"
   },
@@ -27,6 +29,7 @@
     "@influxdata/influxdb-client": "^1.35.0",
     "chalk": "^4.1.0",
     "express": "^5.2.1",
+    "mongo-cache": "github:scuba75/mongo-cache",
     "mqtt": "^5.3.3",
     "node-fetch": "^2.6.12"
   }

@@ -1,11 +1,10 @@
-'use strict'
-const { dataList } = require('./dataList')
+import { dataList } from './dataList.js'
 
-module.exports = ( data = {} ) => {
-  if(!data?.watts || !data?.watt_hours_period) return
+export default function (data = {}) {
+  if (!data?.watts || !data?.watt_hours_period) return
 
-  for(let i in data){
-    if(!data[i]) continue
+  for (let i in data) {
+    if (!data[i]) continue
     dataList[i] = data[i]
   }
 }

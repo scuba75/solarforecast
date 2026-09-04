@@ -1,2 +1,2 @@
 let dataList = {}
-module.exports = { dataList }
+export { dataList }
