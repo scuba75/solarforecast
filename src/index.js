@@ -10,7 +10,7 @@ async function sync(){
   try {
     let res = await getData()
     if (res?.watts && res?.watt_hours_period) {
-      log.info(`New Forcast Data recieved...`)
+      log.info(`New Forecast Data recieved...`)
       await cache.set(res)
       dataList.watts = res.watts
       dataList.watt_hours_period = res.watt_hours_period
